@@ -63,15 +63,9 @@ abstract class CmbBaseData extends BaseData
     protected function buildData()
     {
         $signData = [
-            /* 公共参数
-            'version'       => $this->version,
-            'charset'       => $this->charset,
-            'signType'      => $this->signType,
-            'reqData'       => $this->getReqData(),*/
-
-            'MERCHANTID'    =>  ,//商户代码
-            'POSID'         =>  ,//商户柜台代码
-            'BRANCHID'      =>  ,//分行代码
+            'MERCHANTID'    =>  $this->merchantid,//商户代码
+            'POSID'         =>  $this->posid,//商户柜台代码
+            'BRANCHID'      =>  $this->branchid,//分行代码
         ];
 
         // 移除数组中的空值

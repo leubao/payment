@@ -33,6 +33,8 @@ class Charge
 
         Config::CMB_CHANNEL_APP,// 招行一网通
         'applepay_upacp',// Apple Pay
+
+        Config::CCB_CHANNEL_WEB,//建设银行web支付
     ];
 
     /**

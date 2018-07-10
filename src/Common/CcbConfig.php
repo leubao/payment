@@ -13,8 +13,8 @@ use Payment\Utils\StrUtil;
  */
 class CcbConfig extends ConfigInterface
 {
-    // 调用的接口版本，固定为：1.0
-    public $version = '1.0';
+    // 调用的接口版本，固定为：2.0
+    public $version = '2.0';
 
     // 采用的编码
     public $charset = 'UTF-8';

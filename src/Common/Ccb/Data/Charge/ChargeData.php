@@ -47,8 +47,8 @@ class ChargeData extends CcbBaseData
         if (! empty($timeExpire)) {
             $express = floor(($timeExpire - strtotime($this->dateTime)) / 60);
 
-            if ($express > CmbConfig::MAX_EXPIRE_TIME || $express < 0) {// 招商规定
-                $this->timeout_express = CmbConfig::MAX_EXPIRE_TIME;
+            if ($express > CcbConfig::MAX_EXPIRE_TIME || $express < 0) {// 招商规定
+                $this->timeout_express = CcbConfig::MAX_EXPIRE_TIME;
             } else {
                 $this->timeout_express = $express;
             }
@@ -62,18 +62,12 @@ class ChargeData extends CcbBaseData
     {
         $reqData = [
 
-
-
-            'MERCHANTID'    =>  ,//商户代码
-            'POSID'         =>  ,//商户柜台代码
-            'BRANCHID'      =>  ,//分行代码
-
             'ORDERID'       =>  $this->order_no,//定单号
             'PAYMENT'       =>  $this->amount,//付款金额
             'CURCODE'       =>  '01',//币种 01人民币
-            'TXCODE'        =>,//交易码
-            'REMARK1'       =>,//备注1
-            'REMARK2'       =>,//备注2
+            'TXCODE'        =>  ,//交易码
+            'REMARK1'       =>  ,//备注1
+            'REMARK2'       =>  ,//备注2
             'TYPE'          =>  '1',//防钓鱼
             'GATEWAY'       =>  ,//网关类型
             'CLIENTIP'      =>  $this->client_ip,//客户端IP
@@ -82,37 +76,7 @@ class ChargeData extends CcbBaseData
             'REFERER'       =>  ,
             'INSTALLNUM'    =>  1,//分期期数 不允许分期 TODO
             'TIMEOUT'       =>  ,//订单超时时间YYYYMMDDHHMMSS
-            'MAC'           =>
-
-
-
-
-/*
-            'dateTime' => $this->dateTime,
-            'branchNo' => $this->branchNo,
-            'merchantNo' => $this->merchantNo,
-            'date' => $this->date ? $this->date : date('Ymd', time()),
-            'orderNo' => $this->order_no,
-            'amount' => $this->amount,
-            'expireTimeSpan' => $this->timeout_express ? $this->timeout_express  : '',
-            'payNoticeUrl' => $this->notifyUrl,
-            'payNoticePara' => $this->return_param ? $this->return_param : '',
-            'returnUrl' => $this->returnUrl ? $this->returnUrl : '',
-            'clientIP' => $this->client_ip,
-            'cardType' => $this->limitPay ? $this->limitPay : '',
-            'agrNo' => $this->agr_no,
-            'merchantSerialNo' => $this->serial_no ? $this->serial_no : '',
-            'userID' => $this->user_id ? $this->user_id : '',
-            'mobile' => $this->mobile ? $this->mobile : '',
-            'lon' => $this->lon ? $this->lon : '',
-            'lat' => $this->lat ? $this->lat : '',
-            'riskLevel' => $this->risk_level ? $this->risk_level : '',
-            'signNoticeUrl' => $this->signNoticeUrl ? $this->signNoticeUrl : '',
-            'signNoticePara' => $this->return_param ? $this->return_param : '',
-
-            // 暂时先不支持下面方式
-            'extendInfo' => '',
-            'extendInfoEncrypType' => '',*/
+            'MAC'           =>  
         ];
 
         // 这里不能进行过滤空值，招商的空值也要加入签名中
