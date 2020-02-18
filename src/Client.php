@@ -45,6 +45,8 @@ class Client
     const CMB = 'CMBank';// 招商银行
 
     const WECHAT = 'Wechat';// 微信
+    
+    const YEEPAY = 'yeepay';//易宝支付
 
     /*----------------支付宝--------------------*/
     const ALI_CHANNEL_APP = 'app';// 支付宝 手机app 支付
@@ -84,7 +86,12 @@ class Client
     const CMB_CHANNEL_QR = 'qr';// 招商qr
 
     const CMB_CHANNEL_LITE = 'lite';// 招商小程序
-
+    
+    /*----------------易宝--------------------*/
+    const YEE_CHANNEL_BAR = 'bar';// 易宝 用户被扫，与支付宝的条码支付对应
+    
+    const YEE_CHANNEL_JUHE = 'juhe';// 易宝 聚合支付 商户对接此接口通过易宝完成商户小程序、公众号、支付宝生活号、用 户主扫收款服务
+    
     /*----------------其它--------------------*/
     const TRANSFER_CHANNEL_BANK = 'bank';
 

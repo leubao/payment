@@ -76,7 +76,25 @@ class ArrayUtil
         }
         return $inputs;
     }
-
+    
+    /**
+     * 返回二维数组中，指定的key与对应的值
+     * @param array $inputs
+     * @param array $keys
+     * @return array
+     */
+    public static function returnArrKeys(array $inputs, array $keys){
+        if (empty($keys) || !is_array($keys)) {
+            return $inputs;
+        }
+        $return = [];
+        foreach ($inputs as $k => $v){
+            if(in_array($k, $keys)){
+                $return[$k] = $v;
+            }
+        }
+        return $return;
+    }
     /**
      * 对输入的数组进行字典排序
      * @param array $param 需要排序的数组

@@ -1,13 +1,6 @@
 <h1 align="center">Payment使用文档</h1>
 
 
-# JetBrains OS licenses
-
-`payment` had been being developed with PhpStorm under the free JetBrains Open Source license(s) granted by JetBrains s.r.o., hence I would like to express by thanks here.
-
-[![Stargazers over time](./jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=ABC)
-
-
 [![Software license][ico-license]](LICENSE)
 [![Latest development][ico-version-dev]][link-packagist]
 [![Monthly installs][ico-downloads-monthly]][link-downloads]

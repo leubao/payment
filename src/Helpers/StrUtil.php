@@ -115,4 +115,5 @@ class StrUtil
 
         return "https://cli.im/api/qrcode/code?text={$chl}&mhid=tBHED17pz8shMHcmKdxROK4";
     }
+    
 }
